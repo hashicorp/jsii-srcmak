@@ -15,7 +15,7 @@ jobs:
       conclusion: ${{ steps.build.outputs.conclusion }}
     steps:
       - name: Checkout
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        uses: actions/checkout@v2
         with:
           ref: main
       - name: Set git identity
@@ -35,7 +35,7 @@ jobs:
           git add .
           git diff --patch --staged > .upgrade.tmp.patch
       - name: Upload patch
-        uses: actions/upload-artifact@0b7f8abb1508181956e8e162db84b466c27e18ce # v3.1.2
+        uses: actions/upload-artifact@v2
         with:
           name: .upgrade.tmp.patch
           path: .upgrade.tmp.patch
@@ -51,7 +51,7 @@ jobs:
       checks: write
     steps:
       - name: Checkout
-        uses: actions/checkout@c85c95e3d7251135ab7dc9ce3241c5835cc595a9 # v3.5.3
+        uses: actions/checkout@v2
         with:
           ref: main
       - name: Set git identity
@@ -59,7 +59,7 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
       - name: Download patch
-        uses: actions/download-artifact@9bc31d5ccc31df68ecc42ccf4149144866c47d8a # v3.0.2
+        uses: actions/download-artifact@v2
         with:
           name: .upgrade.tmp.patch
           path: ${{ runner.temp }}
@@ -68,7 +68,7 @@ jobs:
           }}/.upgrade.tmp.patch || echo "Empty patch. Skipping."'
       - name: Create Pull Request
         id: create-pr
-        uses: peter-evans/create-pull-request@153407881ec5c347639a548ade7d8ad1d6740e38 # v5.0.2
+        uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PROJEN_GITHUB_TOKEN }}
           commit-message: >-
