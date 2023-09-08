@@ -17,6 +17,6 @@ jobs:
     if: contains(github.event.pull_request.labels.*.name, 'auto-approve') &&
       (github.event.pull_request.user.login == 'cdklabs-automation')
     steps:
-      - uses: hmarr/auto-approve-action@v2.1.0
+      - uses: hmarr/auto-approve-action@44888193675f29a83e04faf4002fa8c0b537b1e4 # v3.2.1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
