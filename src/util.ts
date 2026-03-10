@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2020, 2023
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 import { spawn, SpawnOptions } from 'child_process';
 import * as os from 'os';
 import * as path from 'path';

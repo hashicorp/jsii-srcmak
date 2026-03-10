@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2020, 2023
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 import * as path from 'path';
 import { promisify } from 'util';
 import * as fs from 'fs-extra';

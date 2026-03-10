@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2020, 2023
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 export interface Options {
   /**
    * The relative path of the .ts entrypoint within the source directory.
