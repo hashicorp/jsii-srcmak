@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2020, 2023
+ * SPDX-License-Identifier: Apache-2.0
+ */
+
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.Calculator = void 0;
